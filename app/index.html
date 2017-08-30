@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/sidenav.js"></script>
+    <script src="js/app.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body ng-app="portfolioApp">
+    <!-- <div ng-controller="MainCtrl">
+        <div class="content" ng-view></div>
+    </div> -->
+
+    <div class="mp-wrapper" ng-controller="MainCtrl">
+        <div class="mp-header">
+            <div class="mp-burger">
+                <span class="line"></span>
+            </div>
+
+            <div class="mp-logo">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78.7 62.7" style="enable-background:new 0 0 78.7 62.7;" xml:space="preserve" width="70px" height="53px">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+                    .st1{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+                </style>
+                <g>
+                    <polyline class="st0" points="55.4,56.4 30.9,13.9 6.4,56.4 44.2,56.4 	"/>
+                </g>
+                <path class="st1" d="M47.2,4.6"/>
+                <polyline class="st0" points="47.2,4.6 22.7,47.1 71.7,47.1 55.5,19 "/>
+            </svg>
+                <h4 class="logo-text">Anurada Gunarathna</h4>
+            </div>
+
+            <div class="mp-cv-link">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 488 488" style="enable-background:new 0 0 488 488;" xml:space="preserve" width="24px" height="24px">
+                <g>
+                    <g>
+                        <path d="M453.5,389.6C396,342.3,333.9,311,321.3,304.8c-1.4-0.7-2.3-2.1-2.3-3.7v-89.6c11.3-7.5,18.7-20.3,18.7-34.9V83.7
+                            C337.7,37.5,300.2,0,254,0h-10h-10c-46.2,0-83.7,37.5-83.7,83.7v92.9c0,14.5,7.4,27.3,18.7,34.9V301c0,1.6-0.9,3-2.3,3.7
+                            c-12.6,6.2-74.7,37.5-132.2,84.8c-10.4,8.5-16.4,21.3-16.4,34.8V488h196.2l19.4-88.8c-39.2-54.6,2.9-57.3,10.3-57.3l0,0l0,0
+                            c7.3,0.1,49.4,2.7,10.3,57.3l19.4,88.8h196.2v-63.7C469.9,410.9,463.9,398.1,453.5,389.6z"/>
+                    </g>
+                </g>
+            </svg>
+            </div>
+        </div>
+
+        <ng-include src="'views/subheader.html'"></ng-include>
+
+        <div class="mp-quote-slider">
+            <div class="mp-quotes-inner">
+                <h2>"Time spent doing useless but interesting and fun things, is never wasted..." </h2>
+                <span>Thats By Me.!</span>
+            </div>
+        </div>
+
+        <div class="" ng-view></div>
+
+        <ng-include src="'views/sidenav.html'"></ng-include>
+
+    </div>
+
+</body>
+
+</html>

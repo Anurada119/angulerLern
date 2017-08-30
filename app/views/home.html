@@ -1,0 +1,44 @@
+<div class="mp-grid">
+    <div class="mp-grid-inner">
+        <div class="post box-post first-post grid-post1">
+            <div class="first-post-inner">
+                <h1 class="my-name">{{ myGreeting }}</h1>
+                <span class="breaker">And i do</span>
+                <h1 class="what-i-do">{{ things }}</h1>
+            </div>
+        </div>
+        <div class="{{ Post.postClass}}" ng-repeat="Post in postUi.postList | orderBy: Post.postYear">
+            <a href="#!/projects/{{$index}}">
+                <div class="mp-post-details">
+
+                    <h5 class="post-year">{{ Post.postYear }}</h5>
+                    <h3 class="post-title">{{ Post.postTitle }}</h3>
+                    <h4 class="post-design-category">{{ Post.postCategory }}</h4>
+                    <span class="post-details" ng-repeat="postTags in Post.postTagList">
+                        {{ postTags.tagNames }}
+                    </span>
+
+                </div>
+            </a>
+
+
+            <!-- <div class="post-bg">
+                <img ng-src="{{ post.postBGUrl }}">
+            </div> -->
+
+            <div class="post-bg" ng-style="{'background-image':'url({{ Post.postBGUrl }})'}">
+
+            </div>
+        </div>
+
+        <!-- <div class="post long-post grid-post3"></div>
+
+        <div class="post box-post grid-post4"></div>
+        <div class="post box-post grid-post1"></div>
+        <div class="post box-post grid-post4"></div>
+
+        <div class="post box-post grid-post2"></div>
+        <div class="post long-post grid-post3"></div>
+        <div class="post box-post grid-post2"></div> -->
+    </div>
+</div>

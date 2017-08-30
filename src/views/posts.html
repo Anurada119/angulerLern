@@ -1,0 +1,29 @@
+<div class="post-wrapper" ng-controller="PostsCtrl">
+    <div class="content-wrapp">
+        
+        <div class="main-content">
+            <h2 class="post-category">{{ singlePostUi.spostCategory }}</h2>
+
+            <h5 class="post-title">{{ singlePostUi.spostYear }}</h3>
+
+            <h1 class="post-title">{{ singlePostUi.spostTitle }}</h3>
+            
+            <h2 ng-repeat="sTags in singlePostUi.spostTagList">{{ sTags.eachTag}}</h2>
+        </div>
+        
+    </div>
+    <!-- <div class="post-avatar" ng-style="{'background-image':'url({{ singlePostUi.spostBGUrl }})'}"></div> -->
+
+    <div class="post-avatar">
+        <a ng-href="#!/home">
+            <div class="go-back">
+                <span class="lines"></span>
+            </div>
+        </a>
+        <div class="image-contain">
+            <img ng src="{{ singlePostUi.spostBGUrl }}">
+        </div>
+    </div>
+    <!-- <img ng-src="{{ singlePostUi.spostBGUrl }}" width="500px;"> -->
+    
+</div>

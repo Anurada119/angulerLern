@@ -1,0 +1,131 @@
+[
+    {
+      "id": 0,
+      "postYear": 2016,
+      "postTitle": "Analytics Website UI/UX Design",
+      "postCategory": "UI/UX Design",
+      "postTags": [
+        "UI Design",
+        "UX Design"
+      ],
+      "postBGUrl": "../images/analytics.jpg",
+      "postClass": "post tall-post grid-post2"
+    },
+    {
+      "id": 1,
+      "postYear": 2016,
+      "postTitle": "Amature Project R&D and Design",
+      "postCategory": "UI/UX Design",
+      "postTags": [
+        "R&D",
+        "UI/UX Design"
+      ],
+      "postBGUrl": "../images/amature-projects.jpg",
+      "postClass": "post long-post grid-post3"
+    },
+    {
+      "id": 2,
+      "postYear": 2017,
+      "postTitle": "Self Branding",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        "Graphic Design",
+        "Branding"
+      ],
+      "postBGUrl": "../images/ag.jpg",
+      "postClass": "post box-post grid-post4"
+    },
+    {
+      "id": 3,
+      "postYear": 2015,
+      "postTitle": "CDP Project / KADE App Design",
+      "postCategory": "Comprehensive Design",
+      "postTags": [
+        "Comprihensive Design Projects"
+      ],
+      "postBGUrl": "../images/kade-app.jpg",
+      "postClass": "post box-post grid-post1"
+    },
+    {
+      "id": 4,
+      "postYear": 2013,
+      "postTitle": "Sri Lankan University Games Posters",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        "Graphic Design"
+      ],
+      "postBGUrl": "../images/slug.jpg",
+      "postClass": "post box-post grid-post4"
+    },
+    {
+      "id": 5,
+      "postYear": 2014,
+      "postTitle": "Athathya Short Movie Poster",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        "Poster Design",
+        "Graphic Design"
+      ],
+      "postBGUrl": "../images/athathya.jpg",
+      "postClass": "post box-post grid-post3"
+    },
+    {
+      "id": 6,
+      "postYear": 2015,
+      "postTitle": "Mobile Phone Mock Up Design",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        "Mockup",
+        "Graphic Design"
+      ],
+      "postBGUrl": "../images/mockup.jpg",
+      "postClass": "post box-postgrid-post2"
+    },
+    {
+      "id": 7,
+      "postYear": 2014,
+      "postTitle": "Jurassic World Fan Art",
+      "postCategory": "3D Modling",
+      "postTags": [
+        "3D",
+        "Graphic Design"
+      ],
+      "postBGUrl": "../images/jurassic-world.jpg",
+      "postClass": "post long-post grid-post2"
+    },
+    {
+      "id": 8,
+      "postYear": 2011,
+      "postTitle": "Game Over ? | Poster Design",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        "Graphic Design",
+        "Poster Design"
+      ],
+      "postBGUrl": "../images/game-over.jpg",
+      "postClass": "post tall-post grid-post2"
+    },
+    {
+      "id": 9,
+      "postYear": 2013,
+      "postTitle": "NTB Website Design",
+      "postCategory": "UI/UX Design",
+      "postTags": [
+        "UI Design",
+        "UX Design"
+      ],
+      "postBGUrl": "../images/ntb.jpg",
+      "postClass": "post long-post grid-post3"
+    },
+    {
+      "id": 10,
+      "postYear": 2017,
+      "postTitle": "CV Design",
+      "postCategory": "Graphic Design",
+      "postTags": [
+        ""
+      ],
+      "postBGUrl": "../images/cv.jpg",
+      "postClass": "post box-post grid-post4"
+    }
+  ]

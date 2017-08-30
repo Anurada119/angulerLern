@@ -1,0 +1,20 @@
+<div class="mp-sidenav" ng-controller="SideNavCtrl">
+    <ul class="mp-main-nav">
+        <li ng-repeat="link in links"><a href="#">{{ link.linkname }}</a></li>
+        <!-- <li><a href="#">About</a></li> -->
+    </ul>
+
+    <div class="contact-me">
+        <span class="message-me-lbl">Contact me on</span>
+        <h1 class="mp-email">{{ myEmail }}</h1>
+    </div>
+
+    <div class="drop-message">
+        <span class="message-me-lbl">Drop me a message</span>
+        <input type="text" placeholder="Your Name" ng-model="myName">
+        <input type="text" placeholder="Your Email">
+        <textarea class="messeage-area" placeholder="Your Message"></textarea>
+        <h2>{{ myName }}</h2>
+        <div class="send-btn">Send</div>
+    </div>
+</div>

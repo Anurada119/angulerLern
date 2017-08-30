@@ -1,0 +1,36 @@
+$postHeight: 204px;
+@media only screen and (max-width: 1366px) {
+    .mp-grid {
+        .mp-grid-inner {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: minmax(auto, $postHeight);
+            height: $postHeight*8;
+            .post {
+                &.box-post {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+                &:nth-child(4),
+                &:nth-child(7) {
+                    grid-column: span 2;
+                    grid-row: span 1;
+                }
+                &:nth-child(6) {
+                    grid-column: span 1;
+                    grid-row: span 2;
+                }
+                &:nth-child(5),
+                &:nth-child(8),
+                &:nth-child(9) {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+            }
+        }
+    }
+}
