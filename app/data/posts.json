@@ -123,9 +123,49 @@
       "postTitle": "CV Design",
       "postCategory": "Graphic Design",
       "postTags": [
-        ""
+        "Graphic Design",
+        "Branding"
       ],
       "postBGUrl": "../images/cv.jpg",
+      "postClass": "post box-post grid-post4"
+    },
+    {
+      "id": 11,
+      "postYear": 2012,
+      "postTitle": "Sri Lankan Portal Website Design",
+      "postCategory": "UI/UX Design",
+      "postTags": [
+        "UI Design",
+        "UX Design",
+        "Reserch"
+      ],
+      "postBGUrl": "../images/lanka-portal.jpg",
+      "postClass": "post box-post grid-post4"
+    },
+    {
+      "id": 12,
+      "postYear": 2014,
+      "postTitle": "Spartan Gym Application",
+      "postCategory": "UI/UX Design",
+      "postTags": [
+        "UI Design",
+        "UX Design",
+        "Application UI Design"
+      ],
+      "postBGUrl": "../images/gym-app.jpg",
+      "postClass": "post box-post grid-post4"
+    },
+    {
+      "id": 12,
+      "postYear": 2015,
+      "postTitle": "Zerged",
+      "postCategory": "3D Modling",
+      "postTags": [
+        "3D",
+        "Character Design",
+        "Research"
+      ],
+      "postBGUrl": "../images/zerged.jpg",
       "postClass": "post box-post grid-post4"
     }
   ]

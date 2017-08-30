@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
     <script src="js/sidenav.js"></script>
     <script src="js/app.js"></script>
 
@@ -67,7 +68,7 @@
             </div>
         </div>
 
-        <div class="" ng-view></div>
+        <div class="{{ pageClass }}" ng-view></div>
 
         <ng-include src="'views/sidenav.html'"></ng-include>
 

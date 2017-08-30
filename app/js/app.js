@@ -1,4 +1,4 @@
-var portfolioApp = angular.module('portfolioApp', ['ngRoute']);
+var portfolioApp = angular.module('portfolioApp', ['ngRoute','ngAnimate']);
 
 portfolioApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
@@ -18,6 +18,7 @@ portfolioApp.config(['$routeProvider', function($routeProvider) {
 portfolioApp.controller('MainCtrl', ['$scope','$http', '$routeParams', function($scope, $http, $routeParams) {
     $scope.myGreeting = 'Hi, I\'m Anurada';
     $scope.things = "Full Process Design";
+    $scope.pageClass = "main-page"
     
     $http({
         method: 'GET',
@@ -33,7 +34,7 @@ portfolioApp.controller('MainCtrl', ['$scope','$http', '$routeParams', function(
 }]);
 
 portfolioApp.controller('PostsCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
-    $scope.name = 'wtf';
+    $scope.pageClass = 'post-page';
     $scope.singlePost = $scope.posts[$routeParams.id];
     //console.log($scope.singlePost)
     $scope.singlePostUi = new SinglePostUI($scope.singlePost);

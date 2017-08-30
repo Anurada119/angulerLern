@@ -1,0 +1,228 @@
+.post-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 75vh;
+    @include font-roboto;
+
+    .content-wrapp{
+        display: flex;
+        width: 100%;
+        background: $white;
+        padding: 75px 75px 75px 75px;
+        margin-left: 25%;
+        box-sizing: border-box;
+        animation: fadeIn forwards 1s ease-in-out;
+        filter: opacity(0);
+        animation-delay: 0.3s;
+        overflow: hidden;
+
+        .main-content{
+            width: 70%;
+            margin-left: 30%;
+            padding-left: 75px;
+            transform: translate(100%);
+            animation: slideFromLeft forwards 0.6s ease-in-out;
+            animation-delay: 0.7s;
+
+            .post-category{
+                font-size: 2rem;
+                @include roboto-light;
+                margin-bottom: 1.75rem;
+                
+                span{
+                    position: relative;
+                    z-index: 2;
+                    color: $white;
+
+                    &:before{
+                        // content: '';
+                        // width: 100%;
+                        // height: 2px;
+                        // background: $purpleHL;
+                        // display: block;
+                        // position: absolute;
+                        // bottom: 5px;
+                        // z-index: -1;
+                        // content: '';
+                        // width: 104%;
+                        // height: 2px;
+                        // background: #C82D7B;
+                        // display: block;
+                        // position: absolute;
+                        // bottom: 14px;
+                        // left: -2%;
+                        // z-index: -1;
+                        content: '';
+                        width: 104%;
+                        height: 32px;
+                        background: #C82D7B;
+                        display: block;
+                        position: absolute;
+                        bottom: 12px;
+                        left: -2%;
+                        z-index: -1;
+                    }
+                }
+                
+            }
+
+            .post-year{
+                font-size: 0.875rem;
+                @include roboto-regular;
+                margin-bottom: 8px;
+                color: $purpleHL;
+
+                &:before{
+                    content: 'Designed in';
+                    padding: 0 8px 0 0;
+                    color: $firstPostText;
+                }
+            }
+
+            .post-title{
+                font-size: 2.5rem;
+                @include roboto-black;
+                text-transform: uppercase;
+                line-height: 2.3rem;
+                color: $darkGray;
+
+            }
+
+            .post-tags{
+                color: darken($firstPostText , 10%);
+
+                &:after{
+                    content: '/';
+                    padding: 0 8px;
+                }
+
+                &:last-child:after{
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .post-avatar{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        position: absolute;
+        height: auto;
+        max-height: 380px;
+        background: $grid-post3 ;
+        top: 75px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        left: 0;
+        transform: translate(-150%);
+        filter: opacity(0);
+        animation: avatarIn forwards 0.8s ease-in-out;
+
+        .go-back{
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: $white;
+            position: absolute;
+            top: -30px;
+            left: 75px;
+            z-index: 2;
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(0, 300px);
+            filter: opacity(0);
+            animation: gobackIn forwards ease-in-out 0.6s;
+            animation-delay: 0.8s;
+
+            .lines{
+                width: 16px;
+                height: 2px;
+                border-radius: 2px;
+                display: block;
+                background: $darkGray;
+                position: relative;
+
+                &:after,
+                &:before{
+                    width: 8px;
+                    height: 2px;
+                    content: '';
+                    display: block;
+                    background: $darkGray;
+                    position: absolute;
+                }
+
+                &:after{
+                    transform: rotate(45deg);
+                    transform-origin: left;
+                }
+
+                &:before{
+                    transform: rotate(-45deg);
+                    transform-origin: left;
+                }
+            }
+        }
+
+        .image-contain{
+            overflow: hidden;
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-height: 380px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+}
+
+//animations
+@keyframes avatarIn {
+    0%{
+        transform: translate(-150%);
+        filter: opacity(0);
+    }
+    100%{
+        transform: translate(0);
+        filter: opacity(1);
+    }
+}
+
+@keyframes gobackIn {
+    0%{
+        filter: opacity(0);
+        transform: translate(0, 300px);
+    }
+
+    100%{
+        filter: opacity(1);
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        filter: opacity(0);
+    }
+    100%{
+        filter: opacity(1);
+    }
+}
+
+@keyframes slideFromLeft {
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}

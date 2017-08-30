@@ -2,13 +2,15 @@
     <div class="content-wrapp">
         
         <div class="main-content">
-            <h2 class="post-category">{{ singlePostUi.spostCategory }}</h2>
+            <h2 class="post-category">
+                <span>{{ singlePostUi.spostCategory }}</span>
+            </h2>
 
-            <h5 class="post-title">{{ singlePostUi.spostYear }}</h3>
+            <h5 class="post-year">{{ singlePostUi.spostYear }}</h3>
 
             <h1 class="post-title">{{ singlePostUi.spostTitle }}</h3>
             
-            <h2 ng-repeat="sTags in singlePostUi.spostTagList">{{ sTags.eachTag}}</h2>
+            <span class="post-tags" ng-repeat="sTags in singlePostUi.spostTagList">{{ sTags.eachTag}}</span>
         </div>
         
     </div>
