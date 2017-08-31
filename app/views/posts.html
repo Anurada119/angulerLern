@@ -3,14 +3,14 @@
         
         <div class="main-content">
             <h2 class="post-category">
-                <span>{{ singlePostUi.spostCategory }}</span>
+                <span>{{ singlePostUi.postCategory }}</span>
             </h2>
 
-            <h5 class="post-year">{{ singlePostUi.spostYear }}</h3>
+            <h5 class="post-year">{{ singlePostUi.postYear }}</h3>
 
-            <h1 class="post-title">{{ singlePostUi.spostTitle }}</h3>
+            <h1 class="post-title">{{ singlePostUi.postTitle }}</h3>
             
-            <span class="post-tags" ng-repeat="sTags in singlePostUi.spostTagList">{{ sTags.eachTag}}</span>
+            <span class="post-tags" ng-repeat="Tags in singlePostUi.postTagList">{{ Tags.tagNames }}</span>
         </div>
         
     </div>
@@ -23,7 +23,7 @@
             </div>
         </a>
         <div class="image-contain">
-            <img ng src="{{ singlePostUi.spostBGUrl }}">
+            <img ng src="{{ singlePostUi.postBGUrl }}">
         </div>
     </div>
     <!-- <img ng-src="{{ singlePostUi.spostBGUrl }}" width="500px;"> -->

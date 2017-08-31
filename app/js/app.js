@@ -37,7 +37,7 @@ portfolioApp.controller('PostsCtrl', ['$scope', '$http', '$routeParams', functio
     $scope.pageClass = 'post-page';
     $scope.singlePost = $scope.posts[$routeParams.id];
     //console.log($scope.singlePost)
-    $scope.singlePostUi = new SinglePostUI($scope.singlePost);
+    $scope.singlePostUi = new Post($scope.singlePost);
     console.log($scope.singlePostUi)
 }]);
 
@@ -86,23 +86,23 @@ function Tags(obj) {
     vm.tagNames = obj;
 }
 
-function SinglePostUI(obj) {
-    var vm = this;
-    vm.spostId = obj.id;
-    vm.spostTitle = obj.postTitle;
-    vm.spostYear = obj.postYear;
-    vm.spostCategory = obj.postCategory;
-    vm.spostClass = obj.postClass;
-    vm.spostBGUrl = obj.postBGUrl;
-    vm.spostTagList = [];
+// function SinglePostUI(obj) {
+//     var vm = this;
+//     vm.spostId = obj.id;
+//     vm.spostTitle = obj.postTitle;
+//     vm.spostYear = obj.postYear;
+//     vm.spostCategory = obj.postCategory;
+//     vm.spostClass = obj.postClass;
+//     vm.spostBGUrl = obj.postBGUrl;
+//     vm.spostTagList = [];
 
-    obj.postTags.forEach(function (e) {
-        vm.spostTagList.push(new sTags(e)); 
-    });
-}
+//     obj.postTags.forEach(function (e) {
+//         vm.spostTagList.push(new sTags(e)); 
+//     });
+// }
 
-function sTags(obj) {
-    var vm = this;
+// function sTags(obj) {
+//     var vm = this;
 
-    vm.eachTag = obj;
-}
+//     vm.eachTag = obj;
+// }

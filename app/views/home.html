@@ -4,7 +4,19 @@
             <div class="first-post-inner">
                 <h1 class="my-name">{{ myGreeting }}</h1>
                 <span class="breaker">And i do</span>
-                <h1 class="what-i-do">{{ things }}</h1>
+                <h1 class="what-i-do">
+                    <span
+                    class="txt-rotate"
+                    data-period="2000"
+                    data-rotate='[ 
+                        "Full Process Design.", 
+                        "UI/UX Design.", 
+                        "UI/UX R&D.", 
+                        "Front End Development.", 
+                        "Graphic Design." 
+                    ]'>
+                </span>
+                </h1>
             </div>
         </div>
         <div class="{{ Post.postClass}}" ng-repeat="Post in postUi.postList | orderBy: Post.postYear">

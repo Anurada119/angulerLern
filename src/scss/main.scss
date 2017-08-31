@@ -154,9 +154,11 @@ body {
 }
 
 .mp-quote-slider {
-    width: 80%;
+    width: 50%;
     margin: 0 auto 55px;
+    padding: 0 1rem;
     display: flex;
+    text-align: center;
     justify-content: center;
     @include font-roboto;
     .mp-quotes-inner {
@@ -165,14 +167,15 @@ body {
         h2 {
             @include roboto-light;
             font-size: 1.25rem;
-            line-height: 1.25rem;
+            line-height: 1.75rem;
             color: $purpleHL;
         }
         span {
             @include roboto-regular;
-            font-size: 0.575rem;
+            font-size: 0.775rem;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
+            color: $darkGray;
             padding: 1rem 0.5rem;
         }
     }
@@ -359,7 +362,8 @@ body {
             @include roboto-bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: $firstPostText;
+            color: $darkGray;
+            min-height: 72px;
         }
     }
 }
