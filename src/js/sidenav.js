@@ -17,5 +17,12 @@ $(document).ready(function () {
             $('.mp-burger').removeClass('sidenav-open');
         })
     });
+
+    if ($('#main').hasClass('post-page')) {
+        $('.mp-quote-slider').hide();
+    }
+
+    
 });
+
 
