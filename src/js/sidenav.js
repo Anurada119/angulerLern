@@ -14,6 +14,7 @@ $(document).ready(function() {
 
         $('.mp-main-nav li').on('click', function() {
             $('.mp-sidenav').removeClass('sidenav-open');
+            $('.mp-quote-slider').removeClass('menu-fix');
             $('.mp-cv-link svg').toggle();
             $('.mp-burger').removeClass('sidenav-open');
         })
