@@ -376,17 +376,26 @@ body {
 @import 'simplerotator';
 // Media Queris
 @import 'media';
-
-.main-page.ng-enter{ 
-    animation: slideInUp 0.5s both ease-in; z-index: 8888; 
-}
-.main-page.ng-leave{ 
-    animation: slideOutDown 0.5s both ease-in; z-index: 9999; 
+.main-page.ng-enter {
+    animation: slideInUp 0.5s both ease-in;
+    z-index: 8888;
 }
 
-.post-page.ng-enter{ 
-    animation: slideInRight 0.5s both ease-in; z-index: 8888; 
+.main-page.ng-leave {
+    animation: slideOutDown 0.5s both ease-in;
+    z-index: 9999;
 }
-.post-page.ng-leave{ 
-    animation: slideOutUp 0.5s both ease-in; z-index: 0; 
+
+.post-page.ng-enter {
+    animation: slideInRight 0.5s both ease-in;
+    z-index: 8888;
+}
+
+.post-page.ng-leave {
+    animation: slideOutUp 0.5s both ease-in;
+    z-index: 0;
+}
+
+.menu-fix+div {
+    height: 0;
 }

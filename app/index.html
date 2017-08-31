@@ -27,7 +27,7 @@
 
     <div class="mp-wrapper" ng-controller="MainCtrl">
         <div class="mp-header">
-            <div class="mp-burger">
+            <div id="close" class="mp-burger">
                 <span class="line"></span>
             </div>
 
@@ -97,7 +97,7 @@
             </div> -->
         </div>
 
-        <div class="{{ pageClass }}" ng-view></div>
+        <div ng-class="{{ pageClass }}" ng-view></div>
 
         <ng-include src="'views/sidenav.html'"></ng-include>
 

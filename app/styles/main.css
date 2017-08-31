@@ -398,7 +398,8 @@ body {
 .mp-sidenav {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding-bottom: 3rem;
   background: #ffffff;
   position: absolute;
   top: 116px;
@@ -499,6 +500,10 @@ body {
   color: #ffffff;
   background: #404040;
   cursor: pointer;
+}
+
+.main-page {
+  overflow: hidden;
 }
 
 .post-wrapper {
@@ -1812,4 +1817,8 @@ body {
 .post-page.ng-leave {
   animation: slideOutUp 0.5s both ease-in;
   z-index: 0;
+}
+
+.menu-fix + div {
+  height: 0;
 }
