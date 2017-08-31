@@ -1,6 +1,72 @@
 $postHeight: 220px;
+@media only screen and (max-width: 1280px){
+    .mp-grid{
+        width: 73%;
+    }
+
+    .post-wrapper{
+        width: 80%;
+    
+        .content-wrapp{
+            padding: 60px;
+    
+            .main-content{
+                width: 80%;
+                margin-left: 25%;
+                padding-left: 60px;
+    
+                .post-category{
+                    font-size: 1.7rem;
+                    margin-bottom: 1.25rem;
+                    
+                    span{
+    
+                        &:before{
+                            height: 26px;
+                            bottom: 10px;
+                        }
+                    }
+                    
+                }
+    
+                .post-year{
+                    font-size: 0.775rem;
+    
+                    &:before{
+                    }
+                }
+    
+                .post-title{
+                    font-size: 2.2rem;
+                    line-height: 2rem;
+    
+                }
+            }
+        }
+    
+        .post-avatar{
+            top: 60px;
+        }
+    }
+}
+
+
 @media only screen and (max-width: 1024px) {
+    .mp-quote-slider {
+        margin: 0 auto 80px;
+        .mp-quotes-inner {
+            h2 {
+                font-size: 1rem;
+                line-height: 1.3rem;
+            }
+            span {
+                font-size: 0.675rem;
+            }
+        }
+    }
+
     .mp-grid {
+        width: 80%;
         .mp-grid-inner {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: minmax(auto, $postHeight);
@@ -30,8 +96,688 @@ $postHeight: 220px;
                     grid-column: span 1;
                     grid-row: span 1;
                 }
+                .post-bg {
+                }
+                .mp-post-details {
+                    //transform: translate(-100%, -100%) rotate(90deg) scale(0);
+                    //transform: scale(1);
+                    filter: opacity(0);
+                    transition: all 0.4s ease-in-out;
+                    overflow: hidden;
+                    .post-title {
+                        font-size: 1.275rem;
+                        line-height: 1.4rem;
+                        letter-spacing: 0px;
+                    }
+                    .post-details {
+                        font-size: 0.557rem;
+                        display: inline-block;
+                        &:after{
+                            content: '/';
+                            padding: 0 8px;
+                        }
+                        &:last-child:after{
+                            content: '';
+                        }
+                    }
+                    .post-design-category {
+                        font-size: 0.85rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .first-post {
+        .first-post-inner {
+            margin: 1.2rem;
+            h1.my-name {
+                font-size: 1.7rem;
+                line-height: 1.7rem;
+                @include roboto-light;
+                color: $firstPostText;
+                letter-spacing: 1px;
+                margin: 1rem 0;
+            }
+            h1.what-i-do {
+                font-size: 1.8rem;
+                line-height: 1.65rem;
+                @include roboto-bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $darkGray;
+                min-height: 72px;
             }
         }
     }
 }
 
+@media only screen and (max-width: 900px){
+    .mp-grid {
+        width: 80%;
+        .mp-grid-inner {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-height: none;
+            flex-wrap: wrap;
+            .post {
+                width: 50%;
+                height: 200px;
+                &:focus {
+                    outline: none;
+                    border: none;
+                }
+                &.box-post {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+                &.long-post {
+                    grid-column: span 2;
+                    grid-row: span 1;
+                }
+                &.tall-post {
+                    grid-column: span 1;
+                    grid-row: span 2;
+                }
+                &:hover {
+                    .mp-post-details {
+                        //transform: translate(0, 0) rotate(0deg) scale(1);
+                        filter: opacity(1);
+                        .post-title {
+                            transform: translate(0);
+                        }
+                        .post-details {
+                            transform: translate(0) scale(1);
+                        }
+                        .post-year {
+                            transform: translate(0, 0) scale(1);
+                        }
+                    }
+                }
+                .post-bg {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 0;
+                    background-size: cover;
+                    -webkit-background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    transform: scale(1.05) rotate(0.02deg);
+                }
+                .mp-post-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    background: rgba(0, 0, 0, 0.9);
+                    position: absolute;
+                    overflow: hidden;
+                    width: 101%;
+                    height: 101%;
+                    top: 0;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0;
+                    color: $white;
+                    cursor: pointer;
+                    z-index: 1;
+                    //transform: translate(-100%, -100%) rotate(90deg) scale(0);
+                    //transform: scale(1);
+                    filter: opacity(0);
+                    transition: all 0.4s ease-in-out;
+                    overflow: hidden;
+                    .post-title {
+                        font-size: 1.675rem;
+                        line-height: 1.4rem;
+                        @include roboto-black;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: $purpleHL;
+                        margin-bottom: 0.5rem;
+                        transform: translate(-100%);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.1s;
+                    }
+                    .post-details {
+                        font-size: 0.657rem;
+                        @include roboto-light;
+                        transform: translate(100%) scale(0);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                    .post-design-category {
+                        font-size: 1rem;
+                        @include roboto-regular;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                    .post-year {
+                        transform: translate(500%, 0) scale(0);
+                        transition: all 0.4s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-wrapper{
+    
+        .content-wrapp{
+            padding: 32px;
+    
+            .main-content{
+                margin-left: 28%;
+                padding-left: 32px;
+    
+                .post-category{
+                    font-size: 1.4rem;
+                    @include roboto-light;
+                    margin-bottom: 1.25rem;
+                    
+                    span{
+                        position: relative;
+                        z-index: 2;
+                        color: $white;
+    
+                        &:before{
+                            height: 24px;
+                            bottom: 8px;
+                        }
+                    }
+                    
+                }
+    
+                .post-year{
+                    font-size: 0.875rem;
+                    @include roboto-regular;
+                    margin-bottom: 8px;
+                    color: $purpleHL;
+    
+                    &:before{
+                        content: 'Designed in';
+                        padding: 0 8px 0 0;
+                        color: $firstPostText;
+                    }
+                }
+    
+                .post-title{
+                    font-size: 2.5rem;
+                    @include roboto-black;
+                    text-transform: uppercase;
+                    line-height: 2.3rem;
+                    color: $darkGray;
+    
+                }
+    
+                .post-tags{
+                    color: darken($firstPostText , 10%);
+    
+                    &:after{
+                        content: '/';
+                        padding: 0 8px;
+                    }
+    
+                    &:last-child:after{
+                        content: '';
+                    }
+                }
+            }
+        }
+    
+        .post-avatar{
+            width: 50%;
+            max-height: 200px;
+            top: 32px;
+    
+            .go-back{
+                width: 40px;
+                height: 40px;
+                top: -20px;
+                left: 32px;
+            }
+    
+            .image-contain{
+                max-height: 200px;
+    
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .mp-wrapper{
+        margin-bottom: 0;
+    }
+
+    .mp-sub-header {
+        .mp-links-list {
+            margin: 50px 0 30px 0;
+            ul {
+                li {
+                    a {
+                        padding: 12px;
+                        width: 24px;
+                        height: 24px;
+
+                        &.center-icon {
+                            width: 32px;
+                            height: 32px;
+                            padding: 0 12px;
+                            svg {
+                                fill: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mp-quote-slider {
+        width: 80%;
+        margin: 0 auto 88px;
+        padding: 0 1rem;
+        .mp-quotes-inner {
+            h2 {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+        }
+    }
+
+    .mp-grid {
+        width: 100%;
+        .mp-grid-inner {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-height: none;
+            flex-wrap: wrap;
+            .post {
+                width: 50%;
+                height: 200px;
+                &:focus {
+                    outline: none;
+                    border: none;
+                }
+                &.box-post {
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+                &.long-post {
+                    grid-column: span 2;
+                    grid-row: span 1;
+                }
+                &.tall-post {
+                    grid-column: span 1;
+                    grid-row: span 2;
+                }
+                &:hover {
+                    .mp-post-details {
+                        //transform: translate(0, 0) rotate(0deg) scale(1);
+                        filter: opacity(1);
+                        .post-title {
+                            transform: translate(0);
+                        }
+                        .post-details {
+                            transform: translate(0) scale(1);
+                        }
+                        .post-year {
+                            transform: translate(0, 0) scale(1);
+                        }
+                    }
+                }
+                .post-bg {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 0;
+                    background-size: cover;
+                    -webkit-background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    transform: scale(1.05) rotate(0.02deg);
+                }
+                .mp-post-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    background: rgba(0, 0, 0, 0.9);
+                    position: absolute;
+                    overflow: hidden;
+                    width: 101%;
+                    height: 101%;
+                    top: 0;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0;
+                    color: $white;
+                    cursor: pointer;
+                    z-index: 1;
+                    //transform: translate(-100%, -100%) rotate(90deg) scale(0);
+                    //transform: scale(1);
+                    filter: opacity(0);
+                    transition: all 0.4s ease-in-out;
+                    overflow: hidden;
+                    .post-title {
+                        font-size: 1.675rem;
+                        line-height: 1.4rem;
+                        @include roboto-black;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: $purpleHL;
+                        margin-bottom: 0.5rem;
+                        transform: translate(-100%);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.1s;
+                    }
+                    .post-details {
+                        font-size: 0.657rem;
+                        @include roboto-light;
+                        transform: translate(100%) scale(0);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                    .post-design-category {
+                        font-size: 1rem;
+                        @include roboto-regular;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                    .post-year {
+                        transform: translate(500%, 0) scale(0);
+                        transition: all 0.4s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-wrapper{
+        width: 100%;
+    
+        .content-wrapp{
+            padding: 16px;
+            margin-left: 15%;
+            margin-right: 5%;
+    
+            .main-content{
+                margin-left: 0;
+                margin-top: 35vh;
+                padding-left: 8px;
+    
+                .post-category{
+                    font-size: 1rem;
+                    @include roboto-light;
+                    margin-bottom: 0.8rem;
+                    
+                    span{
+                        position: relative;
+                        z-index: 2;
+                        color: $white;
+    
+                        &:before{
+                            height: 16px;
+                            bottom: 5px;
+                        }
+                    }
+                    
+                }
+    
+                .post-year{
+                    font-size: 0.675rem;
+                    @include roboto-regular;
+                    margin-bottom: 8px;
+                    color: $purpleHL;
+    
+                    &:before{
+                        content: 'Designed in';
+                        padding: 0 8px 0 0;
+                        color: $firstPostText;
+                    }
+                }
+    
+                .post-title{
+                    font-size: 1.5rem;
+                    @include roboto-black;
+                    text-transform: uppercase;
+                    line-height: 1.3rem;
+                    color: $darkGray;
+    
+                }
+    
+                .post-tags{
+                    color: darken($firstPostText , 10%);
+    
+                    &:after{
+                        content: '/';
+                        padding: 0 8px;
+                    }
+    
+                    &:last-child:after{
+                        content: '';
+                    }
+                }
+            }
+        }
+    
+        .post-avatar{
+            width: 80%;
+            max-height: 30vh;
+            top: 32px;
+            margin-left: 5%;
+    
+            .go-back{
+                width: 40px;
+                height: 40px;
+                top: -20px;
+                left: 32px;
+            }
+    
+            .image-contain{
+                max-height: 30vh;
+    
+            }
+        }
+    }
+
+    .mp-sidenav{
+        ul.mp-main-nav{
+            margin: 120px 0 80px 0;
+            padding: 0;
+            text-align: center;
+            li{
+                &:first-child{
+                }
+            }
+        }
+    
+        .contact-me{
+            @include messege-me-lbl;
+            margin: 0 0 2rem 0;
+    
+            .mp-email{
+                @include roboto-light;
+                font-size: 2rem;
+                color: $purpleHL;
+            }
+        }
+    
+        .drop-message{
+            padding: 0 5%;
+    
+            
+        }
+    }
+    
+
+}
+
+@media only screen and (max-width: 440px){
+    .mp-grid {
+        width: 100%;
+        .mp-grid-inner {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-height: none;
+            flex-wrap: wrap;
+            .post {
+                width: 100%;
+                height: 200px;
+                &:hover {
+                    .mp-post-details {
+                        //transform: translate(0, 0) rotate(0deg) scale(1);
+                        filter: opacity(1);
+                        .post-title {
+                            transform: translate(0);
+                        }
+                        .post-details {
+                            transform: translate(0) scale(1);
+                        }
+                        .post-year {
+                            transform: translate(0, 0) scale(1);
+                        }
+                    }
+                }
+                .post-bg {
+                    display: block;
+                    width: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 0;
+                    background-size: cover;
+                    -webkit-background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position-x: 50%;
+                    transform: scale(1.05) rotate(0.02deg);
+                }
+                .mp-post-details {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 1rem;
+                    box-sizing: border-box;
+                    background: rgba(0, 0, 0, 0.9);
+                    position: absolute;
+                    overflow: hidden;
+                    width: 101%;
+                    height: 101%;
+                    top: 0;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0;
+                    color: $white;
+                    cursor: pointer;
+                    z-index: 1;
+                    //transform: translate(-100%, -100%) rotate(90deg) scale(0);
+                    //transform: scale(1);
+                    filter: opacity(0);
+                    transition: all 0.4s ease-in-out;
+                    overflow: hidden;
+                    .post-title {
+                        font-size: 1.675rem;
+                        line-height: 1.4rem;
+                        @include roboto-black;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        color: $purpleHL;
+                        margin-bottom: 0.5rem;
+                        transform: translate(-100%);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.1s;
+                    }
+                    .post-details {
+                        font-size: 0.657rem;
+                        @include roboto-light;
+                        transform: translate(100%) scale(0);
+                        transition: all 0.3s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                    .post-design-category {
+                        font-size: 1rem;
+                        @include roboto-regular;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                    .post-year {
+                        transform: translate(500%, 0) scale(0);
+                        transition: all 0.4s ease-in-out;
+                        transition-delay: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (any-hover: none) { 
+    .mp-grid {
+        .mp-grid-inner {
+            .post {
+                a{
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 5;
+                    cursor: pointer;
+
+                    .mp-post-details {
+                        margin-right: 1rem;
+                        padding: 1rem;
+                        width: auto;
+                        height: auto;
+                        top: auto;
+                        left: auto;
+                        right: auto;
+                        bottom: 0;
+                        //transform: translate(-100%, -100%) rotate(90deg) scale(0);
+                        //transform: scale(1);
+                        filter: opacity(1);
+                        transition: all 0.4s ease-in-out;
+                        overflow: hidden;
+                        .post-title {
+                            transform: translate(0);
+                        }
+                        .post-details {
+                            transform: translate(0) scale(1);
+                        }
+                        .post-year {
+                            transform: translate(0%, 0) scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+ }

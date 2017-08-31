@@ -25,6 +25,17 @@
     },
     {
       "id": 2,
+      "postYear": 2015,
+      "postTitle": "CDP Project / KADE App Design",
+      "postCategory": "Comprehensive Design",
+      "postTags": [
+        "Comprihensive Design Projects"
+      ],
+      "postBGUrl": "../images/kade-app.jpg",
+      "postClass": "post box-post grid-post1"
+    },
+    {
+      "id": 3,
       "postYear": 2017,
       "postTitle": "Self Branding",
       "postCategory": "Graphic Design",
@@ -34,17 +45,6 @@
       ],
       "postBGUrl": "../images/ag.jpg",
       "postClass": "post box-post grid-post4"
-    },
-    {
-      "id": 3,
-      "postYear": 2015,
-      "postTitle": "CDP Project / KADE App Design",
-      "postCategory": "Comprehensive Design",
-      "postTags": [
-        "Comprihensive Design Projects"
-      ],
-      "postBGUrl": "../images/kade-app.jpg",
-      "postClass": "post box-post grid-post1"
     },
     {
       "id": 4,
