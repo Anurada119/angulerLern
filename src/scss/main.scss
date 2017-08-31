@@ -160,6 +160,7 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
+    position: relative;
     @include font-roboto;
     .mp-quotes-inner {
         display: flex;
@@ -275,6 +276,7 @@ body {
                 right: 0px;
                 bottom: 0;
                 color: $white;
+                cursor: pointer;
                 z-index: 1;
                 //transform: translate(-100%, -100%) rotate(90deg) scale(0);
                 //transform: scale(1);
@@ -373,6 +375,7 @@ body {
 @import 'media';
 @import 'postpage';
 @import 'animations';
+@import 'simplerotator';
 
 .main-page.ng-enter{ 
     animation: slideInUp 0.5s both ease-in; z-index: 8888; 
