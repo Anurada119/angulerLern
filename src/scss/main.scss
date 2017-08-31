@@ -399,3 +399,7 @@ body {
 .menu-fix+div {
     height: 0;
 }
+
+.mp-wrapper+div {
+    display: none;
+}
