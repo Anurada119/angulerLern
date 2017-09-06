@@ -71,12 +71,14 @@
 
 @keyframes postsIn {
     0% {
+        // transform: translate(-100%, 300%) scale(0) skew(0, -10deg);
         transform: translate(-100%, 300%) scale(0);
     }
     // 70% {
     //     transform: translate(-60%, -30%) scale(1.1);
     // }
     100% {
+        // transform: translate(0, 0) scale(1) skew(0, -10deg);
         transform: translate(0, 0) scale(1);
     }
 }
@@ -86,5 +88,19 @@
     $animationDelay: $i/9 + $postDelay - 0.5 - (1/9) + 's';
     .mp-grid .mp-grid-inner .post:nth-child(#{$i}) {
         animation-delay: #{$animationDelay};
+    }
+}
+
+@keyframes postsInM {
+    0% {
+        transform: translate(-100%, 300%) scale(0) skew(0, -10deg);
+        //transform: translate(-100%, 300%) scale(0);
+    }
+    // 70% {
+    //     transform: translate(-60%, -30%) scale(1.1);
+    // }
+    100% {
+        transform: translate(0, 0) scale(1) skew(0, -10deg);
+        //transform: translate(0, 0) scale(1);
     }
 }

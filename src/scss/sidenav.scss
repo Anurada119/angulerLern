@@ -38,8 +38,53 @@
             font-size: 2rem;
             line-height: 2rem;
             text-transform: uppercase;
+            position: relative;
+            color: $white;
+            overflow: hidden;
+            &:nth-child(odd){
+                transform: translate(-500px);
+                filter: opacity(0);
+                &.addLinks{
+                    animation: oddLinks forwards 0.6s ease-in-out;
+                    animation-delay: 0.7s;
+                }
+            }
+            &:nth-child(even){
+                transform: translate(500px);
+                filter: opacity(0);
+                &.addLinks{
+                    animation: evenLinks forwards 0.6s ease-in-out;
+                    animation-delay: 0.7s;
+                }
+            }
             &:first-child {
                 margin-bottom: 48px;
+            }
+            &:before{
+                width: 102%;
+                height: 100%;
+                content: '';
+                background: $purpleHL;
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: -8px;
+                transform: translate(100%) rotate(20deg);
+                transform-origin: right;
+                transition: all 0.3s ease-in-out;
+            }
+            a{
+                color: $purpleHL;
+                transition: all 0.2s ease-in-out;
+            }
+            &:hover{
+                &:before{
+                    transform: translate(0) rotate(0deg);
+                }
+
+                a{
+                    color: $white;
+                }
             }
         }
     }
@@ -91,4 +136,34 @@
 
 .main-page {
     overflow: hidden;
+}
+
+@keyframes oddLinks {
+    0%{
+        transform: translate(-500%);
+        filter: opacity(0);
+    }
+    80%{
+        transform: translate(20%);
+        filter: opacity(1);
+    }
+    100%{
+        transform: translate(0%);
+        filter: opacity(1);
+    }
+}
+
+@keyframes evenLinks {
+    0%{
+        transform: translate(500%);
+        filter: opacity(0);
+    }
+    80%{
+        transform: translate(-20%);
+        filter: opacity(1);
+    }
+    100%{
+        transform: translate(0%);
+        filter: opacity(1);
+    }
 }

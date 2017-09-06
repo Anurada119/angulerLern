@@ -15,6 +15,18 @@ portfolioApp.config(['$routeProvider', function($routeProvider) {
         })
 }])
 
+portfolioApp.controller('SubHeaderCtrl', ['$scope', function ($scope) {
+    $scope.linkedin = 'https://www.linkedin.com/in/anurada119/';
+    $scope.facebook = 'https://www.facebook.com/anurada119';
+    $scope.github = 'https://github.com/Anurada119';
+    $scope.dribbble = 'https://dribbble.com/Anurada';
+    $scope.twitter = 'https://twitter.com/iamanurada';
+    $scope.behance = 'https://www.behance.net/anurada';
+}]);
+
+
+
+
 portfolioApp.controller('MainCtrl', ['$scope','$http', '$routeParams', function($scope, $http, $routeParams) {
     $scope.myGreeting = 'Hi, I\'m Anurada';
     $scope.things = "Full Process Design";
@@ -38,7 +50,7 @@ portfolioApp.controller('PostsCtrl', ['$scope', '$http', '$routeParams', functio
     $scope.singlePost = $scope.posts[$routeParams.id];
     //console.log($scope.singlePost)
     $scope.singlePostUi = new Post($scope.singlePost);
-    console.log($scope.singlePostUi)
+    //console.log($scope.singlePostUi)
 }]);
 
 portfolioApp.controller('SideNavCtrl', ['$scope', function ($scope) {

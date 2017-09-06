@@ -5,7 +5,7 @@
                 <h1 class="my-name">{{ myGreeting }}</h1>
                 <span class="breaker">And i do</span>
                 <h1 class="what-i-do">
-                    <span
+                    <!-- <span
                     class="txt-rotate"
                     data-period="2000"
                     data-rotate='[ 
@@ -14,7 +14,26 @@
                         "UI/UX R&D.", 
                         "Front End Development.", 
                         "Graphic Design." 
-                    ]'>
+                    ]'> -->
+                    <span class="type-it"></span>
+
+                    <script>
+                        $('.type-it').typeIt({
+                            strings: [
+                            'Full Process Design.', 
+                            'UI/UX Design.',
+                            'UI/UX R&D.',
+                            'Front End Development.',
+                            'Graphic Design.'
+                            ],
+                            loop: true,
+                            autoStart: true,
+                            breakLines: false,
+                            loopDelay: 2000,
+                            lifeLike: true,
+                            cursor: true
+                        });
+                    </script>
                 </span>
                 </h1>
             </div>
