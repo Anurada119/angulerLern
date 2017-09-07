@@ -111,6 +111,8 @@
             padding: 1rem;
             box-sizing: border-box;
             border: 2px solid $firstPostText;
+            -webkit-appearance: none;
+            border-radius: 0;
         }
         input {
             height: 60px;

@@ -13,7 +13,7 @@ portfolioApp.config(['$routeProvider', function($routeProvider) {
         .otherwise({
             redirectTo: '/home'
         })
-}])
+}]);
 
 portfolioApp.controller('SubHeaderCtrl', ['$scope', function ($scope) {
     $scope.linkedin = 'https://www.linkedin.com/in/anurada119/';
@@ -31,7 +31,7 @@ portfolioApp.controller('MainCtrl', ['$scope','$http', '$routeParams', function(
     $scope.myGreeting = 'Hi, I\'m Anurada';
     $scope.things = "Full Process Design";
     $scope.pageClass = "main-page"
-    
+
     $http({
         method: 'GET',
         url: '../data/posts.json'
@@ -109,7 +109,7 @@ function Tags(obj) {
 //     vm.spostTagList = [];
 
 //     obj.postTags.forEach(function (e) {
-//         vm.spostTagList.push(new sTags(e)); 
+//         vm.spostTagList.push(new sTags(e));
 //     });
 // }
 
