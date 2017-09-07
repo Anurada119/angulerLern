@@ -13,7 +13,7 @@ portfolioApp.config(['$routeProvider', function($routeProvider) {
         .otherwise({
             redirectTo: '/home'
         })
-}])
+}]);
 
 portfolioApp.controller('SubHeaderCtrl', ['$scope', function ($scope) {
     $scope.linkedin = 'https://www.linkedin.com/in/anurada119/';
@@ -25,13 +25,45 @@ portfolioApp.controller('SubHeaderCtrl', ['$scope', function ($scope) {
 }]);
 
 
+portfolioApp.controller('qSliderCtrl', ['$scope', function($scope){
+   $scope.name = 'Anurada';
+   $scope.quotes = [
+
+      // maximum 6 quotes [ otherwise go add more styles tp simplerotator.css ]
+
+      {
+         quoteContent : '"Time spent doing useless but interesting and fun things, is never wasted..."',
+         author: 'Me !'
+      },
+      {
+         quoteContent : '"People don’t use a product because of the great design; great design helps them use the product."',
+         author: 'Viran Dayaratne'
+      },
+      {
+         quoteContent : '“If we want users to like our software we should design it to behave like a likeable person: respectful, generous and helpful.”',
+         author: 'Alan Cooper'
+      },
+      {
+         quoteContent : '“As far as the customer is concerned, the interface is the product.”',
+         author: 'Jef Raskin'
+      },
+      {
+         quoteContent : '“Your most unhappy customers are your greatest source of learning.”',
+         author: 'Bill Gates'
+      },
+      {
+         quoteContent : '“Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”',
+         author: 'John Maeda'
+      }
+   ];
+}]);
 
 
 portfolioApp.controller('MainCtrl', ['$scope','$http', '$routeParams', function($scope, $http, $routeParams) {
     $scope.myGreeting = 'Hi, I\'m Anurada';
     $scope.things = "Full Process Design";
     $scope.pageClass = "main-page"
-    
+
     $http({
         method: 'GET',
         url: '../data/posts.json'
@@ -109,7 +141,7 @@ function Tags(obj) {
 //     vm.spostTagList = [];
 
 //     obj.postTags.forEach(function (e) {
-//         vm.spostTagList.push(new sTags(e)); 
+//         vm.spostTagList.push(new sTags(e));
 //     });
 // }
 

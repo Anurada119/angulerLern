@@ -11,11 +11,11 @@
     min-height: 32px;
     @include font-roboto;
 }
- 
+
   /*--------------------------------------------------
   -------------------- rotate words ------------------
   ---------------------------------------------------*/
-  
+
   .spinny-words{
     display: block;
     min-width: 100%;
@@ -27,9 +27,11 @@
   }
   .spinny-words p{
       position: absolute;
+      display: block;
+      width: 100%;
       left: 0;
       top:-0px;
-      opacity: 0;    
+      opacity: 0;
       animation: rotateWord 36s linear infinite 0s;
       color: $purpleHL;
   }
@@ -44,23 +46,23 @@
         content: ' - By ';
         color: $purpleHL;
         @include roboto-thin;
-        padding: 0 8px 0 0; 
+        padding: 0 4px 0 16px;
     }
 }
-  .spinny-words p:nth-child(2) { 
-      animation-delay: 6s; 
+  .spinny-words p:nth-child(2) {
+      animation-delay: 6s;
   }
-  .spinny-words p:nth-child(3) { 
-      animation-delay: 12s; 
+  .spinny-words p:nth-child(3) {
+      animation-delay: 12s;
   }
-  .spinny-words p:nth-child(4) { 
-      animation-delay: 18s; 
+  .spinny-words p:nth-child(4) {
+      animation-delay: 18s;
   }
-  .spinny-words p:nth-child(5) { 
-      animation-delay: 24s; 
+  .spinny-words p:nth-child(5) {
+      animation-delay: 24s;
   }
-  .spinny-words p:nth-child(6) { 
-      animation-delay: 30s; 
+  .spinny-words p:nth-child(6) {
+      animation-delay: 30s;
   }
   @keyframes rotateWord {
     0%   { opacity: 0; }

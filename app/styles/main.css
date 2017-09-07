@@ -1038,6 +1038,8 @@ body {
 
 .spinny-words p {
   position: absolute;
+  display: block;
+  width: 100%;
   left: 0;
   top: -0px;
   opacity: 0;
@@ -1056,7 +1058,7 @@ body {
   content: ' - By ';
   color: #C82D7B;
   font-weight: 100;
-  padding: 0 8px 0 0;
+  padding: 0 4px 0 16px;
 }
 
 .spinny-words p:nth-child(2) {

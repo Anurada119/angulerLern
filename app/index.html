@@ -8,11 +8,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    
-    
+
+
     <script src="js/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/typeit.min.js"></script>
-    
+
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
@@ -34,22 +34,22 @@
             </div>
 
             <div class="mp-logo">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78.7 62.7" style="enable-background:new 0 0 78.7 62.7;" xml:space="preserve" width="70px" height="53px">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-                    .st1{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-                </style>
-                <g>
-                    <polyline class="st0" points="55.4,56.4 30.9,13.9 6.4,56.4 44.2,56.4 	"/>
-                </g>
-                <path class="st1" d="M47.2,4.6"/>
-                <polyline class="st0" points="47.2,4.6 22.7,47.1 71.7,47.1 55.5,19 "/>
-            </svg>
+               <svg version="1.1" id="Layer_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 78.7 62.7" style="enable-background:new 0 0 78.7 62.7;" xml:space="preserve" width="70px" height="53px">
+                   <style type="text/css">
+                       .st0{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+                       .st1{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+                   </style>
+                   <g>
+                       <polyline class="st0" points="55.4,56.4 30.9,13.9 6.4,56.4 44.2,56.4 	"/>
+                   </g>
+                   <path class="st1" d="M47.2,4.6"/>
+                   <polyline class="st0" points="47.2,4.6 22.7,47.1 71.7,47.1 55.5,19 "/>
+               </svg>
                 <h4 class="logo-text">Anurada Gunarathna</h4>
             </div>
 
             <div class="mp-cv-link">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 488 488" style="enable-background:new 0 0 488 488;" xml:space="preserve" width="24px" height="24px">
+               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 488 488" style="enable-background:new 0 0 488 488;" xml:space="preserve" width="24px" height="24px">
                 <g>
                     <g>
                         <path d="M453.5,389.6C396,342.3,333.9,311,321.3,304.8c-1.4-0.7-2.3-2.1-2.3-3.7v-89.6c11.3-7.5,18.7-20.3,18.7-34.9V83.7
@@ -58,20 +58,22 @@
                             c7.3,0.1,49.4,2.7,10.3,57.3l19.4,88.8h196.2v-63.7C469.9,410.9,463.9,398.1,453.5,389.6z"/>
                     </g>
                 </g>
-            </svg>
+               </svg>
             </div>
         </div>
 
         <ng-include src="'views/subheader.html'"></ng-include>
 
-        <div class="mp-quote-slider">
+        <div class="mp-quote-slider" ng-controller="qSliderCtrl">
+
             <div class="spinny-wrapper">
                 <h1 class="spinny-words">
-                    <p>
-                        "Time spent doing useless but interesting and fun things, is never wasted..."
-                        <span class="q-author">Author</span>
+                    <p ng-repeat="quote in quotes">
+                        {{ quote.quoteContent }}
+                        <span class="q-author">{{ quote.author }}</span>
                     </p>
-                    <p>
+
+                    <!-- <p>
                         There are three responses to a piece of design – yes, no, and WOW! Wow is the one to aim for.
                         <span class="q-author">Author</span>
                     </p>
@@ -90,7 +92,7 @@
                     <p>
                         "Time spent doing useless but interesting and fun things, is never wasted..."
                         <span class="q-author">Author</span>
-                    </p>
+                    </p> -->
                 </h1>
             </div>
             <!-- <div class="mp-quotes-inner">
@@ -104,7 +106,7 @@
         <ng-include src="'views/sidenav.html'"></ng-include>
 
     </div>
-    
+
 </body>
 
 </html>
