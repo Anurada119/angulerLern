@@ -1,6 +1,6 @@
 <div class="post-wrapper" ng-controller="PostsCtrl">
     <div class="content-wrapp">
-        
+
         <div class="main-content">
             <h2 class="post-category">
                 <span>{{ singlePostUi.postCategory }}</span>
@@ -9,15 +9,15 @@
             <h5 class="post-year">{{ singlePostUi.postYear }}</h3>
 
             <h1 class="post-title">{{ singlePostUi.postTitle }}</h3>
-            
+
             <span class="post-tags" ng-repeat="Tags in singlePostUi.postTagList">{{ Tags.tagNames }}</span>
         </div>
-        
+
     </div>
     <!-- <div class="post-avatar" ng-style="{'background-image':'url({{ singlePostUi.spostBGUrl }})'}"></div> -->
 
     <div class="post-avatar">
-        <a ng-href="#!/home">
+        <a ng-href="#!/home" onclick="imageLoads()">
             <div class="go-back">
                 <span class="lines"></span>
             </div>
@@ -27,5 +27,5 @@
         </div>
     </div>
     <!-- <img ng-src="{{ singlePostUi.spostBGUrl }}" width="500px;"> -->
-    
+
 </div>

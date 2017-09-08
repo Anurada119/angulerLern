@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     $('.mp-burger').on('click', function() {
         $('.mp-sidenav').toggleClass('sidenav-open');
@@ -15,8 +14,36 @@ $(document).ready(function() {
             $('.mp-quote-slider').removeClass('menu-fix');
             $('.mp-main-nav li').removeClass('addLinks');
             $('.mp-main-nav li').removeClass('sidenav-open');
-    
+            $(this).parents('.mp-wrapper').find('.post .post-bg').addClass('preload-needed');
+            $(this).parents('.mp-wrapper').find('.post .post-bg').addClass('imageLoadIn');
+
         });
-    }); 
+    });
+
+   setTimeout(function() {
+      $('.post-bg').addClass('preload-needed');
+   }, 2400);
+
+   setTimeout(function(){
+      $('.post-bg').addClass('imageLoadIn');
+   }, 2410)
+
+   $(window).load(function(){
+
+      $('.preload').fadeOut('fast', function(){
+         $(this).remove();
+      })
+   });
 });
 
+function imageLoads(){
+   $('.post-bg').addClass('preload-needed');
+   $('.post-bg').addClass('imageLoadIn');
+   setTimeout(function() {
+      $('.post-bg').addClass('preload-needed');
+   }, 300);
+
+   setTimeout(function(){
+      $('.post-bg').addClass('imageLoadIn');
+   }, 310)
+}

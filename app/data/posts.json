@@ -32,7 +32,7 @@
         "Comprihensive Design Projects"
       ],
       "postBGUrl": "../images/kade-app.jpg",
-      "postClass": "post box-post grid-post1"
+      "postClass": "post box-post grid-post3"
     },
     {
       "id": 3,
@@ -55,7 +55,7 @@
         "Graphic Design"
       ],
       "postBGUrl": "../images/slug.jpg",
-      "postClass": "post box-post grid-post4"
+      "postClass": "post box-post grid-post2"
     },
     {
       "id": 5,

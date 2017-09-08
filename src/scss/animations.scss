@@ -45,12 +45,12 @@
 }
 
 @keyframes slideOutUp{
-    from    { 
+    from    {
         transform:translateY(0);
         filter: opacity(1)
      }
-    to      { 
-        transform:translateY(-100%); 
+    to      {
+        transform:translateY(-100%);
         filter: opacity(0)
     }
 }
@@ -72,7 +72,7 @@
 @keyframes postsIn {
     0% {
         // transform: translate(-100%, 300%) scale(0) skew(0, -10deg);
-        transform: translate(-100%, 300%) scale(0);
+        transform: translate(-100%, 300%) scale(1);
     }
     // 70% {
     //     transform: translate(-60%, -30%) scale(1.1);
@@ -94,13 +94,13 @@
 @keyframes postsInM {
     0% {
         transform: translate(-100%, 300%) scale(0) skew(0, -10deg);
-        //transform: translate(-100%, 300%) scale(0);
+        transform: translate(-100%, 300%) scale(0);
     }
     // 70% {
     //     transform: translate(-60%, -30%) scale(1.1);
     // }
     100% {
         transform: translate(0, 0) scale(1) skew(0, -10deg);
-        //transform: translate(0, 0) scale(1);
+        transform: translate(0, 0) scale(1);
     }
 }

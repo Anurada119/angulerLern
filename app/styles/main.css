@@ -6,6 +6,7 @@
 
 body {
   background: #ECECEC;
+  position: relative;
 }
 
 .mp-wrapper {
@@ -265,7 +266,7 @@ body {
 }
 
 .mp-grid .mp-grid-inner .post .post-bg {
-  display: block;
+  display: none;
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -280,6 +281,18 @@ body {
   background-repeat: no-repeat;
   background-position-x: 50%;
   transform: scale(1.05) rotate(0.02deg);
+  filter: opacity(1);
+  transition: all 0.6s ease-in-out;
+}
+
+.mp-grid .mp-grid-inner .post .post-bg.preload-needed {
+  display: block;
+  filter: opacity(0);
+}
+
+.mp-grid .mp-grid-inner .post .post-bg.imageLoadIn {
+  transition: all 0.6s ease-in-out;
+  filter: opacity(1);
 }
 
 .mp-grid .mp-grid-inner .post .mp-post-details {
@@ -912,7 +925,7 @@ body {
 
 @keyframes postsIn {
   0% {
-    transform: translate(-100%, 300%) scale(0);
+    transform: translate(-100%, 300%) scale(1);
   }
 
   100% {
@@ -1003,10 +1016,12 @@ body {
 @keyframes postsInM {
   0% {
     transform: translate(-100%, 300%) scale(0) skew(0, -10deg);
+    transform: translate(-100%, 300%) scale(0);
   }
 
   100% {
     transform: translate(0, 0) scale(1) skew(0, -10deg);
+    transform: translate(0, 0) scale(1);
   }
 }
 
@@ -1112,6 +1127,78 @@ body {
 
   100% {
     opacity: 0;
+  }
+}
+
+.preload {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 999;
+  overflow: hidden !important;
+}
+
+.preload .preload-inner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.preload .preload-inner .preload-logo {
+  text-align: center;
+}
+
+.preload .preload-inner .preload-logo .logo-text {
+  font-family: 'Roboto', sans-serif;
+}
+
+.preload .preload-inner .preload-animation {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preload .preload-inner .preload-animation .triangle {
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: transparent 45px solid;
+  border-right: transparent 45px solid;
+  border-bottom: 70px solid #f88;
+  border-top: 0px solid #f88;
+  position: relative;
+}
+
+.preload .preload-inner .preload-animation .triangle.triangle-1 {
+  top: -25px;
+  left: 35px;
+  animation: logoanim infinite 0.8s ease-in-out;
+}
+
+.preload .preload-inner .preload-animation .triangle.triangle-2 {
+  top: -32px;
+  left: -41px;
+  animation: logoanim infinite 0.8s ease-in-out;
+  animation-delay: 0.4s;
+}
+
+@keyframes logoanim {
+  0% {
+    filter: opacity(1);
+  }
+
+  100% {
+    filter: opacity(0);
   }
 }
 
@@ -1767,11 +1854,11 @@ body {
     height: 100%;
     max-height: none;
     flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 10px 0;
   }
 
   .mp-grid .mp-grid-inner .post {
-    transform: translate(0%, 100%) scale(0) skew(0, -10deg);
+    transform: translate(0%, 100%) scale(0) rotate(30deg);
     width: 100%;
     height: 200px;
     animation-name: postsInM;

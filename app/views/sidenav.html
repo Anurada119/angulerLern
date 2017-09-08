@@ -1,6 +1,6 @@
 <div class="mp-sidenav" ng-controller="SideNavCtrl">
     <ul class="mp-main-nav">
-        <li ng-repeat="link in links"><a href="#">{{ link.linkname }}</a></li>
+        <li ng-repeat="link in links" onclick="imageLoads()"><a href="#">{{ link.linkname }}</a></li>
         <!-- <li><a href="#">About</a></li> -->
     </ul>
 
@@ -9,7 +9,9 @@
         <h1 class="mp-email">{{ myEmail }}</h1>
     </div>
 
-    <div class="drop-message">
+    <ng-include src="'views/subheader.html'"></ng-include>
+
+    <div class="drop-message" style="display:none">
         <span class="message-me-lbl">Drop me a message</span>
         <input type="text" placeholder="Your Name" ng-model="myName">
         <input type="text" placeholder="Your Email">

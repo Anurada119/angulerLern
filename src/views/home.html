@@ -5,22 +5,13 @@
                 <h1 class="my-name">{{ myGreeting }}</h1>
                 <span class="breaker">And i do</span>
                 <h1 class="what-i-do">
-                    <!-- <span
-                    class="txt-rotate"
-                    data-period="2000"
-                    data-rotate='[ 
-                        "Full Process Design.", 
-                        "UI/UX Design.", 
-                        "UI/UX R&D.", 
-                        "Front End Development.", 
-                        "Graphic Design." 
-                    ]'> -->
+
                     <span class="type-it"></span>
 
                     <script>
                         $('.type-it').typeIt({
                             strings: [
-                            'Full Process Design.', 
+                            'Full Process Design.',
                             'UI/UX Design.',
                             'UI/UX R&D.',
                             'Front End Development.',
@@ -41,24 +32,24 @@
         <div class="{{ Post.postClass}}" ng-repeat="Post in postUi.postList | orderBy: Post.postYear">
             <a href="#!/projects/{{$index}}">
                 <div class="mp-post-details">
-                    
+
                     <h5 class="post-year">{{ Post.postYear }}</h5>
                     <h3 class="post-title">{{ Post.postTitle }}</h3>
                     <h4 class="post-design-category">{{ Post.postCategory }}</h4>
                     <span class="post-details" ng-repeat="postTags in Post.postTagList">
                         {{ postTags.tagNames }}
                     </span>
-                
+
                 </div>
             </a>
-            
+
 
             <!-- <div class="post-bg">
                 <img ng-src="{{ post.postBGUrl }}">
             </div> -->
 
             <div class="post-bg" ng-style="{'background-image':'url({{ Post.postBGUrl }})'}">
-                
+
             </div>
         </div>
 

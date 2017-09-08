@@ -36,10 +36,6 @@ portfolioApp.controller('qSliderCtrl', ['$scope', function($scope){
          author: 'Me !'
       },
       {
-         quoteContent : '"People don’t use a product because of the great design; great design helps them use the product."',
-         author: 'Viran Dayaratne'
-      },
-      {
          quoteContent : '“If we want users to like our software we should design it to behave like a likeable person: respectful, generous and helpful.”',
          author: 'Alan Cooper'
       },
@@ -54,6 +50,10 @@ portfolioApp.controller('qSliderCtrl', ['$scope', function($scope){
       {
          quoteContent : '“Design used to be the seasoning you’d sprinkle on for taste; now it’s the flour you need at the start of the recipe.”',
          author: 'John Maeda'
+      },
+      {
+         quoteContent : '"People don’t use a product because of the great design; great design helps them use the product."',
+         author: 'Viran Dayaratne'
       }
    ];
 }]);
